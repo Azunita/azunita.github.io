@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - UVA | Cultivamos tu futuro digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="shortcut icon" href="img/uva-favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">UVA</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero de Contacto -->
+    <section class="contact-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hablemos de tu proyecto</h1>
+                <p class="hero-subtitle">La consultoría inicial es completamente gratuita. Cuéntanos tu idea y te ayudamos a hacerla realidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulario de Contacto -->
+                <div class="contact-form-section">
+                    <div class="form-header">
+                        <h2>Envíanos un mensaje</h2>
+                        <p>Completa el formulario y te contactaremos en menos de 24 horas</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjkerjeq" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa">Empresa u organización</label>
+                            <input type="text" id="empresa" name="empresa">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico *</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servicio">Tipo de servicio</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">Selecciona una opción</option>
+                                <option value="plan-inicial">Plan Inicial ($399/mes)</option>
+                                <option value="plan-profesional">Plan Profesional ($799/mes)</option>
+                                <option value="plan-enterprise">Plan Enterprise ($1,499/mes)</option>
+                                <option value="desarrollo-custom">Desarrollo personalizado</option>
+                                <option value="consultoria">Consultoría tecnológica</option>
+                                <option value="auditoria">Auditoría tecnológica</option>
+                                <option value="otro">Otro servicio</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="presupuesto">Presupuesto aproximado</label>
+                            <select id="presupuesto" name="presupuesto">
+                                <option value="">Selecciona un rango</option>
+                                <option value="0-500">Menos de $500 USD</option>
+                                <option value="500-1000">$500 - $1,000 USD</option>
+                                <option value="1000-2500">$1,000 - $2,500 USD</option>
+                                <option value="2500-5000">$2,500 - $5,000 USD</option>
+                                <option value="5000+">Más de $5,000 USD</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Cuéntanos sobre tu proyecto *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe tu proyecto, objetivos, necesidades técnicas y cualquier información relevante..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            <label for="acepto">Acepto los términos y condiciones y autorizo el tratamiento de mis datos personales</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Enviar mensaje</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="contact-info-section">
+                    <div class="contact-card">
+                        <h3>Información de contacto</h3>
+                        <p class="contact-description">Estamos aquí para ayudarte. Elige la forma que prefieras para contactarnos.</p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:proyecto.cheddar.ia@gmail.com" class="contact-method">
+                                <div class="method-icon email-icon">📧</div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <p>proyecto.cheddar.ia@gmail.com</p>
+                                    <small>Respuesta en 2-4 horas</small>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/573135929505" class="contact-method" target="_blank">
+                                <div class="method-icon whatsapp-icon">📱</div>
+                                <div class="method-info">
+                                    <h4>WhatsApp</h4>
+                                    <p>+57 313 592 9505</p>
+                                    <small>Respuesta inmediata</small>
+                                </div>
+                            </a>
+
+                            <a href="https://instagram.com/uva.dev" class="contact-method" target="_blank">
+                                <div class="method-icon instagram-icon">📸</div>
+                                <div class="method-info">
+                                    <h4>Instagram</h4>
+                                    <p>@uva.dev</p>
+                                    <small>Síguenos para novedades</small>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/company/uva-dev" class="contact-method" target="_blank">
+                                <div class="method-icon linkedin-icon">💼</div>
+                                <div class="method-info">
+                                    <h4>LinkedIn</h4>
+                                    <p>/company/uva-dev</p>
+                                    <small>Conéctate profesionalmente</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Horarios de Atención -->
+                    <div class="schedule-card">
+                        <h3>Horarios de atención</h3>
+                        <div class="schedule-item">
+                            <span class="day">Lunes a Viernes</span>
+                            <span class="time">8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Sábados</span>
+                            <span class="time">9:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Domingos</span>
+                            <span class="time">Solo emergencias</span>
+                        </div>
+                        <p class="schedule-note">*Tiempo zona horaria de Colombia (COT)</p>
+                    </div>
+
+                    <!-- FAQ Rápido -->
+                    <div class="faq-card">
+                        <h3>Preguntas frecuentes</h3>
+                        <div class="faq-item">
+                            <h4>¿Cuánto tiempo toma un proyecto?</h4>
+                            <p>Depende del alcance, pero proyectos simples toman 2-4 semanas.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>¿Ofrecen soporte post-entrega?</h4>
+                            <p>Sí, todos nuestros planes incluyen soporte y mantenimiento.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>¿Trabajan con empresas internacionales?</h4>
+                            <p>Por supuesto, trabajamos con clientes de toda América Latina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Prefieres una llamada?</h2>
+            <p>Programa una videllamada gratuita de 30 minutos para discutir tu proyecto en detalle</p>
+            <a href="https://calendly.com/proyecto-cheddar-ia/uva-dev" class="cta-btn" target="_blank">
+                Agendar consultoría gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UVA</h3>
+                    <p>Cultivamos tu futuro digital con soluciones tecnológicas personalizadas y soporte cercano.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/uva-dev" target="_blank">LinkedIn</a>
+                        <a href="https://instagram.com/uva.dev" target="_blank">Instagram</a>
+                        <a href="mailto:hola@uva.dev">Email</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <a href="servicios.html">Desarrollo de software</a>
+                    <a href="servicios.html">Consultoría tecnológica</a>
+                    <a href="servicios.html">Automatización de procesos</a>
+                    <a href="servicios.html">Auditorías tecnológicas</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <a href="nosotros.html">Sobre nosotros</a>
+                    <a href="portafolio.html">Portafolio</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: hola@uva.dev</p>
+                    <p>WhatsApp: +57 300 123 4567</p>
+                    <p>Medellín, Colombia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UVA (Usma, Valencia, Aranza) - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+</body>
+</html>
