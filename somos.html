@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca del Proyecto - Profesor Cheddar</title>
+    <style>
+        :root {
+            --cheese-yellow: #ffd33d;
+            --cheese-dark: #e6b800;
+            --bg-cream: #fff9e6;
+            --accent-blue: #306998;
+            --accent-yellow: #ffd43b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg-cream);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--cheese-yellow), var(--cheese-dark));
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: var(--accent-blue);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--cheese-yellow);
+            padding-bottom: 0.5rem;
+        }
+        
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--bg-cream);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            background: #f8f9fa;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .member-photo {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--cheese-yellow), var(--cheese-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+        
+        .member-info {
+            padding: 2rem;
+        }
+        
+        .member-info h3 {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: var(--cheese-dark);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .member-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .team-photo-group {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .group-photo {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--cheese-yellow));
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .group-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .group-caption {
+            font-style: italic;
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-blue), #1e4b75);
+            color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            background: var(--cheese-yellow);
+            color: #333;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: var(--cheese-dark);
+            transform: scale(1.05);
+        }
+        
+        .nav-bar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-bar a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-bar a:hover {
+            color: var(--cheese-dark);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.php" style="font-size: 1.3rem; font-weight: bold;">🧀 Profesor Cheddar</a>
+    </nav>
+    
+    <div class="header">
+        <h1>Acerca del Proyecto Cheddar</h1>
+        <p>Aprendiendo Python de forma gamificada y divertida</p>
+    </div>
+    
+    <div class="container">
+        <!-- ¿Qué es? -->
+        <div class="section">
+            <h2>¿Qué es Proyecto Cheddar?</h2>
+            <p>
+                Proyecto Cheddar es una plataforma educativa innovadora que combina el aprendizaje de programación Python con elementos de videojuegos RPG. 
+                Inspirada en Duolingo, nuestra plataforma transforma el proceso de aprender a programar en una aventura épica donde los estudiantes 
+                avanzan por niveles, eligen especializaciones y derrotan "bugs" mientras dominan Python.
+            </p>
+            <p>
+                A diferencia de las plataformas tradicionales, Proyecto Cheddar gamifica completamente la experiencia educativa, haciendo que 
+                cada lección sea interactiva, cada ejercicio sea un desafío y cada logro sea una recompensa tangible en forma de XP, niveles y badges.
+            </p>
+        </div>
+        
+        <!-- Características -->
+        <div class="section">
+            <h2>Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Sistema RPG</h3>
+                    <p>Sube de nivel, gana XP y evoluciona tu personaje mientras aprendes</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>4 Especializaciones</h3>
+                    <p>Elige tu camino: Análisis de Datos, IA, Ciencia de Datos o Software</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Logros y Badges</h3>
+                    <p>Desbloquea achievements mientras dominas Python</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚔️</div>
+                    <h3>Batallas contra Bugs</h3>
+                    <p>Derrota jefes finales resolviendo desafíos de programación</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Lecciones Interactivas</h3>
+                    <p>Múltiples formatos: tutoriales, swipe cards, batallas y más</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>IA Integrada</h3>
+                    <p>Asistencia personalizada con inteligencia artificial</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cómo Funciona -->
+        <div class="section">
+            <h2>¿Cómo Funciona?</h2>
+            <ol style="font-size: 1.1rem; line-height: 2; padding-left: 2rem;">
+                <li><strong>Regístrate</strong> y crea tu perfil de programador</li>
+                <li><strong>Comienza como "Sin Clase"</strong> con lecciones básicas de Python</li>
+                <li><strong>Completa módulos</strong> para ganar XP y subir de nivel</li>
+                <li><strong>Alcanza nivel 5</strong> para elegir tu especialización</li>
+                <li><strong>Avanza por 4 fases</strong>: Niño → Adolescente → Adulto → Anciano (Maestro)</li>
+                <li><strong>Derrota jefes finales</strong> al completar cada fase</li>
+                <li><strong>Desbloquea logros</strong> y compite en el ranking global</li>
+            </ol>
+        </div>
+        
+        <!-- Equipo -->
+        <div class="section">
+            <h2>Nuestro Equipo</h2>
+            
+            <!-- Foto Grupal -->
+            <div class="team-photo-group">
+                <div class="group-photo">
+                     <img src="../IMG/nosotros.jpg" alt="Equipo Proyecto Cheddar " style="width: 100%; height: 100%; object-fit: cover;"> 
+                </div>
+                <p class="group-caption">
+                    El equipo de Proyecto Cheddar trabajando juntos para revolucionar la educación en programación
+                </p>
+            </div>
+            
+            <h3 style="color: var(--accent-blue); margin: 3rem 0 2rem 0; font-size: 1.8rem;">Conoce a los Integrantes</h3>
+            
+            <div class="team-grid">
+                <!-- Miembro 1 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        
+                        <img src="../IMG/cristofer.jpg" alt="Cristofer" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Nombre del Participante 1</h3>
+                        <div class="member-role">Desarrollador Full Stack / Líder del Proyecto</div>
+                        <p class="member-description">
+                            Descripción del participante 1. Responsabilidades, habilidades y aportes al proyecto. 
+                            Experiencia en desarrollo web y pasión por la educación tecnológica.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Miembro 2 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="ruta/foto2.jpg" alt="Valencia" style="width: 100%; height: 100%; object-fit: cover;"> 
+                    </div>
+                    <div class="member-info">
+                        <h3>Nombre del Participante 2</h3>
+                        <div class="member-role">Diseñador UX/UI / Frontend Developer</div>
+                        <p class="member-description">
+                            Descripción del participante 2. Especialista en diseño de interfaces y experiencia de usuario. 
+                            Enfocado en crear experiencias visuales atractivas y funcionales.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Miembro 3 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                            <img src="../IMG/Alejandra.jpg" alt="Alejandra" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Nombre del Participante 3</h3>
+                        <div class="member-role">Backend Developer / Database Architect</div>
+                        <p class="member-description">
+                            Descripción del participante 3. Experto en bases de datos y lógica del servidor. 
+                            Responsable de la arquitectura de datos y sistemas de gamificación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tecnologías -->
+        <div class="section">
+            <h2>Tecnologías Utilizadas</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🐘</div>
+                    <h3>PHP</h3>
+                    <p>Backend y lógica del servidor</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🗄️</div>
+                    <h3>MySQL</h3>
+                    <p>Base de datos relacional</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>HTML/CSS/JS</h3>
+                    <p>Frontend interactivo</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>IA para asistencia personalizada</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
