@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - UVA | Nuestros Proyectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portafolio.css">
+    <link rel="shortcut icon" href="img/uva-favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">UVA</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero de Portafolio -->
+    <section class="portfolio-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Nuestro Portafolio</h1>
+                <p class="hero-subtitle">Estos proyectos y opiniones son meramente ilustrativos sobre lo que UVA podria llegar a ser en un futuro pues de las tecnologias aqui mencionadas algunas aun no las conocemos</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Éxito</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Tecnologías</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros de Proyectos -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="automatizacion">Automatización</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="consultoria">Consultoría</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Proyectos -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                
+                <!-- Proyecto 1 -->
+                <article class="project-card" data-category="web automatizacion">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🍽️</span>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-details-btn" data-project="1">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Web App</span>
+                            <span class="tag">Automatización</span>
+                        </div>
+                        <h3>Sistema de Pedidos - Restaurante Local</h3>
+                        <p class="project-description">Automatización completa del proceso de pedidos mediante WhatsApp Business integrado con sistema de gestión de cocina.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">WhatsApp API</span>
+                        </div>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <span class="result-value">40%</span>
+                                <span class="result-label">↓ Errores</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-value">25%</span>
+                                <span class="result-label">↑ Ventas</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card" data-category="web consultoria">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🏥</span>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-details-btn" data-project="2">Ver detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Web App</span>
+                            <span class="tag">Gestión</span>
+                        </div>
+                        <h3>Sistema de Gestión - Consultorio Médico</h3>
+                        <p class="project-description">Plataforma integral para agendamiento de citas, gestión de historias clínicas y comunicación con pacientes.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Vue.js</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                        </div>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <span class="result-value">60%</span>
+                                <span class="result-label">↓ Tiempo</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-value">90%</span>
+                                <span class="result-label">Satisfacción</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 - En desarrollo -->
+                <article class="project-card coming-soon" data-category="web mobile">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🚀</span>
+                        </div>
+                        <div class="coming-soon-badge">Próximamente</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                        <h3>App Móvil - Tienda Online</h3>
+                        <p class="project-description">Aplicación móvil para tienda de ropa local con catálogo, carrito de compras y pagos integrados.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React Native</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Stripe</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-label">En desarrollo</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4 - Concepto -->
+                <article class="project-card coming-soon" data-category="automatizacion">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">📊</span>
+                        </div>
+                        <div class="coming-soon-badge">En planificación</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Automatización</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        <h3>Dashboard de Analytics - Empresa Retail</h3>
+                        <p class="project-description">Sistema de análisis de datos en tiempo real con predicciones de ventas y gestión de inventario.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">D3.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-label">Fase de diseño</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"UVA transformó completamente la forma en que manejamos los pedidos. El sistema es intuitivo y nuestro equipo lo adoptó en menos de una semana. Las ventas aumentaron y los errores prácticamente desaparecieron."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Roberto Martínez</h4>
+                            <p>Dueño - Restaurante La Cocina</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Lo que más valoro de UVA es su cercanía. No son solo desarrolladores, son socios que entienden mi negocio. El sistema de gestión de pacientes nos ahorró horas de trabajo administrativo cada día."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                            <h4>Dra. Carolina Díaz</h4>
+                            <p>Directora - Consultorio Médico Integral</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Contraté a UVA para una consultoría y terminé con una solución completa que superó mis expectativas. Su honestidad y transparencia en todo el proceso fue excepcional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Miguel Ángel Torres</h4>
+                            <p>Gerente - Comercial Los Andes</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo -->
+    <section class="process-section">
+        <div class="container">
+            <h2>¿Cómo trabajamos en cada proyecto?</h2>
+            <p class="section-subtitle">Un proceso probado que garantiza resultados</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">🎯</div>
+                    <h3>1. Descubrimiento</h3>
+                    <p>Entendemos tu negocio, tus desafíos y tus objetivos. Definimos juntos el alcance y éxito del proyecto.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">📐</div>
+                    <h3>2. Diseño</h3>
+                    <p>Creamos prototipos y wireframes. Te mostramos cómo se verá antes de escribir una línea de código.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">⚙️</div>
+                    <h3>3. Desarrollo</h3>
+                    <p>Construimos con metodología ágil. Entregas parciales cada semana para que veas el progreso.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">🧪</div>
+                    <h3>4. Pruebas</h3>
+                    <p>Testing exhaustivo con casos reales. Tu equipo prueba antes del lanzamiento oficial.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">🚀</div>
+                    <h3>5. Lanzamiento</h3>
+                    <p>Implementación controlada con monitoreo. Capacitamos a tu equipo para usar la herramienta.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">🔧</div>
+                    <h3>6. Soporte</h3>
+                    <p>Mantenimiento continuo, actualizaciones y mejoras según tus necesidades evolucionen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="tech-showcase">
+        <div class="container">
+            <h2>Tecnologías que dominamos</h2>
+            <p class="section-subtitle">Usamos las herramientas correctas para cada desafío</p>
+            
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">⚛️</span>
+                            <span class="tech-name">React</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">💚</span>
+                            <span class="tech-name">Vue.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🎨</span>
+                            <span class="tech-name">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">🟢</span>
+                            <span class="tech-name">Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🐍</span>
+                            <span class="tech-name">Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🟦</span>
+                            <span class="tech-name">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Bases de Datos</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">🐘</span>
+                            <span class="tech-name">PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🍃</span>
+                            <span class="tech-name">MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🔥</span>
+                            <span class="tech-name">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">☁️</span>
+                            <span class="tech-name">AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🐳</span>
+                            <span class="tech-name">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🔄</span>
+                            <span class="tech-name">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para ser nuestro próximo caso de éxito?</h2>
+                <p>Cuéntanos tu proyecto y hagamos algo increíble juntos</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-primary">Iniciar proyecto</a>
+                    <a href="servicios.html" class="btn btn-secondary">Ver planes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Proyecto -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <!-- Contenido dinámico del proyecto -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UVA</h3>
+                    <p>Cultivamos tu futuro digital con soluciones tecnológicas personalizadas y soporte cercano.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/uva-dev" target="_blank">LinkedIn</a>
+                        <a href="https://instagram.com/uva.dev" target="_blank">Instagram</a>
+                        <a href="mailto:hola@uva.dev">Email</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <a href="servicios.html">Planes mensuales</a>
+                    <a href="servicios.html">Desarrollo custom</a>
+                    <a href="servicios.html">Consultoría</a>
+                    <a href="servicios.html">Auditorías</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <a href="nosotros.html">Sobre nosotros</a>
+                    <a href="portafolio.html">Portafolio</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: hola@uva.dev</p>
+                    <p>WhatsApp: +57 300 123 4567</p>
+                    <p>Medellín, Colombia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UVA (Usma, Valencia, Aranza) - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/portafolio.js"></script>
+</body>
+</html>
